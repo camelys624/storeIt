@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,7 +44,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
                   key={index}
                   className={cn("sidebar-nav-item", active && "shad-active")}
                 >
-                  <a className="flex items-center gap-4">
+                  <div className="flex items-center gap-4">
                     <Image
                       src={icon}
                       alt={name}
@@ -51,7 +53,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
                       className={cn("nav-icon", active && "nav-icon-active")}
                     />
                     <p className="hidden lg:block">{name}</p>
-                  </a>
+                  </div>
                 </li>
               </Link>
             );
@@ -59,7 +61,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
         </ul>
       </nav>
       <Image
-        src="/assets/images/fiels-2.png"
+        src="/assets/images/files-2.png"
         alt="logo"
         width={506}
         height={418}
